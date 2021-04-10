@@ -4,10 +4,10 @@ Hi, my name is Jia Hao Choo. I am a currently a first year Computer Science stud
 
 ### Resume
 
-def view_resume():
-    if online:
-        return [Online Resume](https://resume.io/r/9oXJtS38D)
-    else:
+def view_resume():\
+    if online:\
+        return [Online Resume](https://resume.io/r/9oXJtS38D)\
+    else:\
         return 
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
