@@ -50,8 +50,13 @@ setInterval(checkNav, 50);
 // Make sure mobile view drop down list is not shown on scroll
 
 function offList() {
-  document.getElementById("dropdown").style.display = "none";
-  currentView = 'none';
+
+  var z = window.matchMedia('(max-width: 700px)');
+
+  if (z.matches) {
+    document.getElementById("dropdown").style.display = "none";
+    currentView = 'none';
+  }
 }
 
 // Typing effect
