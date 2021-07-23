@@ -46,3 +46,24 @@ function checkNav() {
 }
 
 setInterval(checkNav, 50);
+
+// Make sure mobile view drop down list is not shown on scroll
+
+function offList() {
+  document.getElementById("dropdown").style.display = "none";
+  currentView = 'none';
+}
+
+// Typing effect
+
+var i = 0;
+var txt = 'Brief Introduction:'; /* The text */
+var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("titletxt").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
