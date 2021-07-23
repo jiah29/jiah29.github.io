@@ -92,5 +92,5 @@ function changeImage(obj){
 function revertImage(obj){
   var image = document.getElementById("images/profile-photo");
   
-  image.src = 'profile.jpeg';
+  image.src = 'images/profile.jpeg';
 }
