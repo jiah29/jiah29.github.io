@@ -1,6 +1,7 @@
 // Hamburger bar interaction
 
 document.getElementById("hamburger").addEventListener("click", displayDrop);
+document.getElementById("hamburger").addEventListener("keypress", displayDrop);
 
 var currentView;
 
