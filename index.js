@@ -90,7 +90,7 @@ function changeImage(obj){
 }
 
 function revertImage(obj){
-  var image = document.getElementById("images/profile-photo");
+  var image = document.getElementById("profile-photo");
   
   image.src = 'images/profile.jpeg';
 }
