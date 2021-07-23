@@ -81,16 +81,16 @@ function changeImage(obj){
   var image = document.getElementById("profile-photo");
 
   if (obj.id == "cs") {
-      image.src = 'https://media.giphy.com/media/u1WhXLjwgcXpHJBMRM/giphy.gif';
+      image.src = 'images/cs.gif';
   } else if (obj.id == "geo"){
-      image.src = 'https://www.esri.com/arcgis-blog/wp-content/uploads/2017/11/NOVA-Map-GIF.gif';
+      image.src = 'images/geo.gif';
   } else {
-    image.src = 'https://media.giphy.com/media/TJP7EH5i1fB2rKeWbf/giphy.gif';
+    image.src = 'images/stats.gif';
   }
 }
 
 function revertImage(obj){
-  var image = document.getElementById("profile-photo");
+  var image = document.getElementById("images/profile-photo");
   
   image.src = 'profile.jpeg';
 }
