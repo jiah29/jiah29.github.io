@@ -94,3 +94,57 @@ function revertImage(obj){
   
   image.src = 'images/profile.jpeg';
 }
+
+// Get date and return notice message for resume.html
+n =  new Date();
+y = n.getFullYear();
+m = n.getMonth() + 1;
+d = n.getDate();
+document.getElementById("date").innerHTML += "As of " + d + "/" + m + "/" + y + ", the information on this page is accurate up until July 2021.";
+
+// Show social icons for resume.html mobile version
+
+var toggleIcon;
+
+function toggleIcons() {
+  var icons = document.getElementById("icons");
+
+  if (icons.style.display == "block") {
+    document.getElementById("icons").style.display ="none";
+    toggleIcon = "off";
+  } else {
+    document.getElementById("icons").style.display ="block";
+    toggleIcon = "on";
+  }
+}
+
+// Show social icons for resume.html mobile version are displayed consistently
+
+function checkToggleIcon(){
+
+  var y = window.matchMedia('(max-width: 700px)');
+
+  if (y.matches) {
+    if (toggleIcon == 'on') {
+      document.getElementById("icons").style.display = "block";
+    } else {
+      document.getElementById("icons").style.display = "none";
+    }
+  }
+}
+
+setInterval(checkToggleIcon, 5);
+
+// Make sure social icons are always shown on large view for resume.html
+
+function checkIcons() {
+  var x = window.matchMedia('(min-width: 700px)');
+
+  if (x.matches){
+    if (document.getElementById("icons").style.display == 'none'){
+      document.getElementById("icons").style.display = "block";
+    }
+  }
+}
+
+setInterval(checkIcons, 50);
