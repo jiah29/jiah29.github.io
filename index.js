@@ -1,3 +1,13 @@
+// create alert on load for mobile view
+
+function showAlert(){
+  var y = window.matchMedia('(max-width: 700px)');
+
+  if (y.matches) {
+    alert("For the best experience, view this website in portrait mode.")
+  }
+}
+
 // Hamburger bar interaction
 
 document.getElementById("hamburger").addEventListener("click", displayDrop);
@@ -9,11 +19,9 @@ function displayDrop(){
   if (document.getElementById("navlinks").style.display == "block") {
       document.getElementById("navlinks").style.display = "none";
       currentView = 'none';
-      console.log(currentView);
     } else {
       document.getElementById("navlinks").style.display = "block";
       currentView = 'block';
-      console.log(currentView);
     }
 }
 
@@ -64,7 +72,11 @@ function offList() {
 
 var i = 0;
 var txt = 'Brief Introduction:'; /* The text */
-var speed = 50; /* The speed/duration of the effect in milliseconds */
+var speed = 100; /* The speed/duration of the effect in milliseconds */
+var pathname = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+if (pathname=="research.html"){
+  txt="Past Researches";
+}
 
 function typeWriter() {
   if (i < txt.length) {
@@ -148,3 +160,33 @@ function checkIcons() {
 }
 
 setInterval(checkIcons, 50);
+
+// float up element when scrolled into view for research.html
+
+function floatUp() {
+  var elements;
+  var windowHeight;
+
+  function init() {
+    elements = document.querySelectorAll('.hidden');
+    windowHeight = window.innerHeight;
+  }
+
+  function checkPosition() {
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var positionFromTop = elements[i].getBoundingClientRect().top;
+
+      if (positionFromTop - windowHeight <= 0) {
+        element.classList.add('scroll');
+        element.classList.remove('hidden');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', checkPosition);
+  window.addEventListener('resize', init);
+
+  init();
+  checkPosition();
+}
