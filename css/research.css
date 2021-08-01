@@ -159,6 +159,7 @@
         transition-property: border-radius, background-image;
         transition-duration: 0.5s;
         transition-timing-function: ease;
+        border: solid 1px #000000;
     }
 
     .item:hover {
@@ -359,6 +360,7 @@
         transition-property: border-radius, background-image;
         transition-duration: 0.5s;
         transition-timing-function: ease;
+        border: none;
     }
 
     .hidden{
