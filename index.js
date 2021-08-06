@@ -76,6 +76,8 @@ var speed = 100; /* The speed/duration of the effect in milliseconds */
 var pathname = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 if (pathname=="research.html"){
   txt="Past Researches";
+} else if (pathname =="technical.html"){
+  txt="Technical Projects";
 }
 
 function typeWriter() {
