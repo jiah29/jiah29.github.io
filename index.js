@@ -114,7 +114,7 @@ n =  new Date();
 y = n.getFullYear();
 m = n.getMonth() + 1;
 d = n.getDate();
-document.getElementById("date").innerHTML += "As of " + d + "/" + m + "/" + y + ", the information on this page is accurate up until July 2021.";
+document.getElementById("date").innerHTML += "As of " + d + "/" + m + "/" + y + ", the information on this page is accurate up until September 2021.";
 
 // Show social icons for resume.html mobile version
 
