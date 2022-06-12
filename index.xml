@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jia Hao Choo</title>
-    <link>https://hugo-profile.netlify.app/</link>
+    <link>https://jiah29.github.io/</link>
     <description>Recent content on Jia Hao Choo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://hugo-profile.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://jiah29.github.io/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
